@@ -16,7 +16,7 @@ A dashboard application that displays and analyses data about dams in NSW. Creat
 
 ## Deployment Link
 
-[Live Deployment](https://frontend-water-dashboard-nsw.netlify.app/)
+- [Live Deployment](https://frontend-water-dashboard-nsw.netlify.app/)
 
 <!-- 
 ## Project Links (Cloud)
