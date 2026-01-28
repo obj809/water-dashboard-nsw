@@ -9,12 +9,14 @@ A dashboard application that displays and analyses data about dams in NSW. Creat
 - [Frontend](https://github.com/obj809/frontend-water-dashboard-nsw)
 - [Backend](https://github.com/obj809/backend-water-dashboard-nsw)
 - [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw)
+- [Supabase](https://github.com/obj809/supabase-water-dashboard-nsw)
 
+<!-- 
 ## Project Links (Cloud)
 
 - [AWS RDS](https://github.com/obj809/aws-rds-water-dashboard-nsw)
 - [AWS Glue](https://github.com/obj809/aws-glue-water-dashboard-nsw)
-- [Data Engineering](https://github.com/obj809/aws-etl-water-dashboard-nsw)
+- [Data Engineering](https://github.com/obj809/aws-etl-water-dashboard-nsw) -->
 
 ## Frontend
 <img src="./gifs/drone.gif" alt="App Demo" width="900" height="600"/>
