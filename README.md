@@ -53,7 +53,7 @@ Data-first interface with responsive design, RTK Query caching for performance, 
 <a id="backend"></a>
 # Backend - Flask API
 
-![API documentation](images/api-documentation-dark.png)
+![API documentation](images/api-documentation-light.png)
 
 ## Tech Stack
 Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, PostgreSQL/MySQL, pytest, Gunicorn
@@ -76,12 +76,6 @@ RESTful architecture with auto-generated Swagger documentation and multi-databas
 # Database - MySQL & Supabase PostgreSQL
 
 ![Database schema](images/database-schema.png)
-
-## Tech Stack
-Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
-
-## Design Goals
-Data integrity with foreign keys, idempotent upsert operations, parameterized queries, and modular seeding scripts.
 
 ## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
