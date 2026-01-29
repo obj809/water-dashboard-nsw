@@ -37,7 +37,7 @@ Modular architecture with separated concerns: React frontend for visualization, 
 React 18, TypeScript, Vite, Redux Toolkit (RTK Query), React Router v6, Recharts, Chart.js, D3.js, SCSS, Vitest
 
 ## Design Goals
-Data-first interface with responsive design, RTK Query caching for performance, and smooth-scroll navigation.
+Data-first interface with responsive design, RTK Query caching for performance, and smooth navigation.
 
 ## How To Use
 1. Ensure backend API is running on `http://127.0.0.1:5001`
