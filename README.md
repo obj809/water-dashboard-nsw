@@ -75,6 +75,8 @@ RESTful architecture with auto-generated Swagger documentation and multi-databas
 <a id="database"></a>
 # Database - MySQL & Supabase PostgreSQL
 
+![Database schema](images/database-schema.png)
+
 ## Tech Stack
 Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
 
