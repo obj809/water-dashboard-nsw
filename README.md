@@ -83,23 +83,6 @@ Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
 ## Design Goals
 Data integrity with foreign keys, idempotent upsert operations, parameterized queries, and modular seeding scripts.
 
-## How To Use
-**Local MySQL:**
-```bash
-python3 scripts/local_db_create_db.py && python3 scripts/local_db_create_schema.py && python3 scripts/local_db_seed_data.py
-```
-
-**Supabase:**
-```bash
-python scripts/db_connect.py && python scripts/create_schema.py && python scripts/seed_data.py
-```
-
-## Project Features
-- [x] 36 NSW dams with metadata and grouping system
-- [x] 24-month historical snapshots with rolling averages
-- [x] Excel export functionality
-
-
 ## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
 - Check out my [GitHub](https://github.com/cyberforge1) for more projects.
