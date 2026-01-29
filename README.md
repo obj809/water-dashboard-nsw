@@ -14,6 +14,8 @@ A dashboard application that displays and analyses data about dams in NSW. Creat
 
 - [Supabase Database](https://github.com/obj809/supabase-water-dashboard-nsw)
 
+- [AWS ETL Pipeline](https://github.com/obj809/aws-etl-pipeline)
+
 ## Deployment Link
 
 - [Live Deployment](https://frontend-water-dashboard-nsw.netlify.app/)
