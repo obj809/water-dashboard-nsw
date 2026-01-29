@@ -83,7 +83,7 @@ Normalized schema with foreign key integrity, idempotent upsert operations, and 
 3. Run `python scripts/create_schema.py && python scripts/seed_data.py`
 
 ## Project Features
-- [x] 36 NSW dams with metadata, coordinates, and grouping system
+- [x] NSW dams with metadata, coordinates, and grouping system
 - [x] 24-month historical snapshots with time-series data
 - [x] Rolling average analysis (12-month, 5-year, 20-year)
 
