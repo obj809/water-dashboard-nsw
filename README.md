@@ -71,6 +71,22 @@ RESTful architecture with auto-generated Swagger documentation and multi-databas
 
 ![Database schema](images/database-schema.png)
 
+## Tech Stack
+Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
+
+## Design Goals
+Normalized schema with foreign key integrity, idempotent upsert operations, and modular dependency-ordered seeding scripts.
+
+## How To Use
+1. Run `python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt`
+2. Configure `.env` with database credentials
+3. Run `python scripts/create_schema.py && python scripts/seed_data.py`
+
+## Project Features
+- [x] 36 NSW dams with metadata, coordinates, and grouping system
+- [x] 24-month historical snapshots with time-series data
+- [x] Rolling average analysis (12-month, 5-year, 20-year)
+
 ## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
 - Check out my [GitHub](https://github.com/cyberforge1) for more projects.
