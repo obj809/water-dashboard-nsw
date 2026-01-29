@@ -44,6 +44,9 @@ Data-first interface with responsive design, RTK Query caching for performance, 
 <a id="backend"></a>
 # Backend - Flask API
 
+# Backend – Flask API
+https://github.com/obj809/backend-water-dashboard-nsw
+
 ![API documentation](images/api-documentation-dark.png)
 
 ## Project Link
@@ -63,6 +66,10 @@ RESTful architecture with auto-generated Swagger documentation and multi-databas
 
 <a id="database"></a>
 # Database - MySQL & Supabase PostgreSQL
+
+# Database – MySQL & Supabase PostgreSQL
+https://github.com/obj809/local-db-water-dashboard-nsw  
+https://github.com/obj809/supabase-water-dashboard-nsw
 
 ![Database schema](images/database-schema.png)
 
