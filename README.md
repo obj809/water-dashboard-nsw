@@ -17,11 +17,6 @@ A full-stack platform for monitoring dam water resources across New South Wales,
 - [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw)
 - [Supabase](https://github.com/obj809/supabase-water-dashboard-nsw)
 
-## Table of Contents
-- [Frontend](#frontend)
-- [Backend](#backend)
-- [Database](#database)
-
 <a id="frontend"></a>
 # Frontend – React Dashboard
 https://github.com/obj809/frontend-water-dashboard-nsw
