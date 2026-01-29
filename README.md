@@ -65,10 +65,13 @@ RESTful architecture with auto-generated Swagger documentation and multi-databas
 - [x] Interactive Swagger UI and CI/CD with GitHub Actions
 
 <a id="database"></a>
-# Database - MySQL & Supabase PostgreSQL
 
 # Database – MySQL & Supabase PostgreSQL
-https://github.com/obj809/local-db-water-dashboard-nsw  
+
+Local database:
+https://github.com/obj809/local-db-water-dashboard-nsw
+
+Supabase:
 https://github.com/obj809/supabase-water-dashboard-nsw
 
 ![Database schema](images/database-schema.png)
