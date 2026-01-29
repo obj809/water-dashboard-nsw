@@ -14,16 +14,16 @@ A full-stack platform for monitoring dam water resources across New South Wales,
 - [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw)
 - [Supabase](https://github.com/obj809/supabase-water-dashboard-nsw)
 
-## Table of Contents
-- [Frontend](#frontend)
-- [Backend](#backend)
-- [Database](#database)
-
 ## Goals & MVP
 Build an interactive dashboard for visualizing NSW dam data with real-time storage monitoring, historical queries with date filtering, and analytical insights including 12-month, 5-year, and 20-year rolling averages across 36 dams.
 
 ## Build Strategy
 Modular architecture with separated concerns: React frontend for visualization, Flask API for data access, and interchangeable database backends (MySQL for development, PostgreSQL for production).
+
+## Table of Contents
+- [Frontend](#frontend)
+- [Backend](#backend)
+- [Database](#database)
 
 <a id="frontend"></a>
 # Frontend - React Dashboard
