@@ -32,9 +32,6 @@ https://github.com/obj809/frontend-water-dashboard-nsw
 ## Tech Stack
 React 18, TypeScript, Vite, Redux Toolkit (RTK Query), React Router v6, Recharts, Chart.js, D3.js, SCSS, Vitest
 
-## Design Goals
-Data-first interface with responsive design, RTK Query caching for performance, and smooth navigation.
-
 ## Project Features
 - [x] Real-time data fetching with RTK Query caching
 - [x] Search functionality and stacked-pages navigation
@@ -50,9 +47,6 @@ https://github.com/obj809/backend-water-dashboard-nsw
 
 ## Tech Stack
 Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, PostgreSQL/MySQL, pytest, Gunicorn
-
-## Design Goals
-RESTful architecture with auto-generated Swagger documentation and multi-database support.
 
 ## Project Features
 - [x] CRUD operations with geolocation data
@@ -74,9 +68,6 @@ https://github.com/obj809/supabase-water-dashboard-nsw
 
 ## Tech Stack
 Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
-
-## Design Goals
-Normalized schema with foreign key integrity, idempotent upsert operations, and modular dependency-ordered seeding scripts.
 
 ## Project Features
 - [x] NSW dams with metadata, coordinates, and grouping system
