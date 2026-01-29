@@ -44,13 +44,9 @@ Data-first interface with responsive design, RTK Query caching for performance, 
 <a id="backend"></a>
 # Backend - Flask API
 
-# Backend – Flask API
 https://github.com/obj809/backend-water-dashboard-nsw
 
 ![API documentation](images/api-documentation-dark.png)
-
-## Project Link
-- [Backend](https://github.com/obj809/backend-water-dashboard-nsw)
 
 ## Tech Stack
 Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, PostgreSQL/MySQL, pytest, Gunicorn
@@ -75,11 +71,6 @@ Supabase:
 https://github.com/obj809/supabase-water-dashboard-nsw
 
 ![Database schema](images/database-schema.png)
-
-## Project Links
-
-- [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw)
-- [Supabase](https://github.com/obj809/supabase-water-dashboard-nsw)
 
 ## Tech Stack
 Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
