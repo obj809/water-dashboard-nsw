@@ -1,5 +1,8 @@
 # Water Dashboard NSW
 
+![test-frontend](https://github.com/obj809/frontend-water-dashboard-nsw/actions/workflows/test.yml/badge.svg?branch=main)
+![tests-backend](https://github.com/obj809/backend-water-dashboard-nsw/actions/workflows/ci.yml/badge.svg)
+
 ## Project Overview
 A full-stack platform for monitoring dam water resources across New South Wales, Australia. Features a React dashboard, Flask REST API, and flexible database support for MySQL and PostgreSQL.
 
@@ -14,19 +17,21 @@ A full-stack platform for monitoring dam water resources across New South Wales,
 - [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw)
 - [Supabase](https://github.com/obj809/supabase-water-dashboard-nsw)
 
+## Table of Contents
+- [Frontend](#frontend)
+- [Backend](#backend)
+- [Database](#database)
+
 ## Goals & MVP
 Build an interactive dashboard for visualizing NSW dam data with real-time storage monitoring, historical queries with date filtering, and analytical insights including 12-month, 5-year, and 20-year rolling averages across 36 dams.
 
 ## Build Strategy
 Modular architecture with separated concerns: React frontend for visualization, Flask API for data access, and interchangeable database backends (MySQL for development, PostgreSQL for production).
 
-## Table of Contents
-- [Frontend](#frontend)
-- [Backend](#backend)
-- [Database](#database)
-
 <a id="frontend"></a>
 # Frontend - React Dashboard
+
+<img src="./screen-recording.gif" alt="App Demo" width="960"/>
 
 ## Tech Stack
 React 18, TypeScript, Vite, Redux Toolkit (RTK Query), React Router v6, Recharts, Chart.js, D3.js, SCSS, Vitest
@@ -47,6 +52,8 @@ Data-first interface with responsive design, RTK Query caching for performance, 
 
 <a id="backend"></a>
 # Backend - Flask API
+
+![Application Screenshot](screenshots/documentation-light.png "Swagger API Documentation")
 
 ## Tech Stack
 Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, PostgreSQL/MySQL, pytest, Gunicorn
