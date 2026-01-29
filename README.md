@@ -27,6 +27,9 @@ A full-stack platform for monitoring dam water resources across New South Wales,
 
 <img src="./screen-recording.gif" alt="App Demo" width="960"/>
 
+## Project Link
+- [Frontend](https://github.com/obj809/frontend-water-dashboard-nsw)
+
 ## Tech Stack
 React 18, TypeScript, Vite, Redux Toolkit (RTK Query), React Router v6, Recharts, Chart.js, D3.js, SCSS, Vitest
 
@@ -44,6 +47,9 @@ Data-first interface with responsive design, RTK Query caching for performance, 
 
 ![API documentation](images/api-documentation-dark.png)
 
+## Project Link
+- [Backend](https://github.com/obj809/backend-water-dashboard-nsw)
+
 ## Tech Stack
 Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, PostgreSQL/MySQL, pytest, Gunicorn
 
@@ -60,6 +66,11 @@ RESTful architecture with auto-generated Swagger documentation and multi-databas
 # Database - MySQL & Supabase PostgreSQL
 
 ![Database schema](images/database-schema.png)
+
+## Project Links
+
+- [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw)
+- [Supabase](https://github.com/obj809/supabase-water-dashboard-nsw)
 
 ## Tech Stack
 Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
