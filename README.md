@@ -5,7 +5,7 @@
 
 ## Deployment Link
 
-- [Live Deployment](https://frontend-water-dashboard-nsw.netlify.app/)
+[Live Deployment](https://frontend-water-dashboard-nsw.netlify.app/)
 
 ## Project Overview
 A dashboard application that displays and analyses data about dams in NSW. Created with a Flask API, TypeScript React, and MySQL.
