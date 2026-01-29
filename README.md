@@ -3,14 +3,21 @@
 ## Project Overview
 A full-stack platform for monitoring dam water resources across New South Wales, Australia. Features a React dashboard, Flask REST API, and flexible database support for MySQL and PostgreSQL.
 
-## Screenshot
-![App Demo](frontend/screenshot.png)
+## Live Deployment
+
+- [Live Deployment](https://frontend-water-dashboard-nsw.netlify.app/)
+
+## Project Links
+
+- [Frontend](https://github.com/obj809/frontend-water-dashboard-nsw)
+- [Backend](https://github.com/obj809/backend-water-dashboard-nsw)
+- [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw)
+- [Supabase](https://github.com/obj809/supabase-water-dashboard-nsw)
 
 ## Table of Contents
 - [Frontend](#frontend)
 - [Backend](#backend)
 - [Database](#database)
-- [General](#general)
 
 ## Goals & MVP
 Build an interactive dashboard for visualizing NSW dam data with real-time storage monitoring, historical queries with date filtering, and analytical insights including 12-month, 5-year, and 20-year rolling averages across 36 dams.
@@ -83,27 +90,13 @@ python scripts/db_connect.py && python scripts/create_schema.py && python script
 - [x] 24-month historical snapshots with rolling averages
 - [x] Excel export functionality
 
-<a id="general"></a>
-# General
-
-## Additions & Improvements
-- [ ] Historical comparison tool and data export (CSV, PNG)
-- [ ] Weather data integration and critical level alerts
-- [ ] Dark mode, E2E testing, pagination, WebSocket updates
-- [ ] Docker containerization and automated scheduling
-
-## Learning Highlights
-- RTK Query caching and multi-charting library integration
-- Flask-RESTX auto-documentation and SQLAlchemy relationships
-- Multi-database support with environment-based configuration
-- Normalized schema design with orchestrated data pipelines
-
-## Challenges
-- Vite proxy configuration for Flask backend communication
-- Composite primary keys requiring custom Flask-RESTX handling
-- Foreign key constraint ordering and synthetic data generation
 
 ## Contact Me
-- [LinkedIn](https://linkedin.com/in/yourprofile) · [GitHub](https://github.com/yourusername) · obj809@gmail.com
-
+- Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
+- Check out my [GitHub](https://github.com/cyberforge1) for more projects.
+- Or send me an email at obj809@gmail.com
+<br />
+Thanks for your interest in this project. Feel free to reach out with any thoughts or questions.
+<br />
+<br />
 Oliver Jenkins © 2025
