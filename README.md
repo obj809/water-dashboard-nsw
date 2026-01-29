@@ -10,6 +10,8 @@
 ## Project Overview
 A dashboard application that displays and analyses data about dams in NSW. Created with a Flask API, TypeScript React, and MySQL.
 
+## Project Links
+
 - [Frontend](https://github.com/obj809/frontend-water-dashboard-nsw)
 
 - [Backend](https://github.com/obj809/backend-water-dashboard-nsw)
