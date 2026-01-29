@@ -53,7 +53,7 @@ Data-first interface with responsive design, RTK Query caching for performance, 
 <a id="backend"></a>
 # Backend - Flask API
 
-![API documentation](images/api-documentation-light.png)
+![API documentation](images/api-documentation-dark.png)
 
 ## Tech Stack
 Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, PostgreSQL/MySQL, pytest, Gunicorn
