@@ -1,146 +1,230 @@
 # Water Dashboard NSW
 
-[![tests-frontend](https://github.com/obj809/frontend-water-dashboard-nsw/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/obj809/frontend-water-dashboard-nsw/actions/workflows/test.yml)
-[![tests-backend](https://github.com/obj809/backend-water-dashboard-nsw/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/obj809/backend-water-dashboard-nsw/actions/workflows/ci.yml)
+A full-stack data visualization platform for monitoring and analyzing dam water resources across New South Wales, Australia. This monorepo contains a React frontend, Flask REST API backend, and database management systems for both local MySQL and cloud-hosted Supabase PostgreSQL environments.
 
-A modern data visualization dashboard displaying live and historical water dam information for New South Wales, Australia. Built with React, TypeScript, and Flask to provide real-time insights into dam storage levels, water inflows, and releases.
+![App Demo](frontend/screenshot.png)
 
-## Live Demo
+## Table of Contents
 
-**[https://frontend-water-dashboard-nsw.netlify.app/](https://frontend-water-dashboard-nsw.netlify.app/)**
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Sub-Projects](#sub-projects)
+- [Features](#features)
+- [Roadmap](#roadmap)
+- [Known Issues](#known-issues)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-## Screenshots
+## Overview
 
-| Light Mode | Dark Mode |
-|------------|-----------|
-| ![Light Mode](images/project-screenshot-light.png) | ![Dark Mode](images/project-screenshot-dark.png) |
+Water Dashboard NSW provides real-time insights into dam storage levels, water inflows, and releases across 36 NSW dams. The platform combines interactive data visualizations with historical trend analysis, including 12-month, 5-year, and 20-year rolling averages.
+
+### Key Capabilities
+
+- Real-time dam storage monitoring with automatic data refresh
+- Historical time-series data with customizable date filtering
+- Multi-period trend analysis across grouped dam systems
+- Interactive charts built with Recharts, Chart.js, and D3.js
+- RESTful API with auto-generated Swagger documentation
+- Flexible database support for local development and cloud deployment
 
 ## Architecture
 
-![Project Architecture](images/project-diagram.png)
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        Frontend (React)                         │
+│              TypeScript • Redux Toolkit • Vite                  │
+└─────────────────────────┬───────────────────────────────────────┘
+                          │ HTTP/REST
+┌─────────────────────────▼───────────────────────────────────────┐
+│                    Backend API (Flask)                          │
+│            Flask-RESTX • SQLAlchemy • Swagger UI                │
+└─────────────────────────┬───────────────────────────────────────┘
+                          │ SQL
+┌─────────────────────────▼───────────────────────────────────────┐
+│                        Database Layer                           │
+│         MySQL (Local) │ PostgreSQL (Supabase/Render)            │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-### Database Schema
+## Tech Stack
 
-![Database ERD](database-erd.png)
+| Layer | Technologies |
+|-------|--------------|
+| Frontend | React 18, TypeScript, Vite, Redux Toolkit (RTK Query), React Router v6, SCSS |
+| Visualization | Recharts, Chart.js, D3.js |
+| Backend | Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, Gunicorn |
+| Database | PostgreSQL, MySQL 8.0+, Supabase |
+| Testing | Vitest, Testing Library, pytest |
+| Data Processing | Pandas, OpenPyXL, psycopg2 |
 
-## Project Repositories
-
-| Repository | Description | Tech Stack |
-|------------|-------------|------------|
-| [Frontend](https://github.com/obj809/frontend-water-dashboard-nsw) | React dashboard UI | React 18, TypeScript, Vite, Redux Toolkit, Recharts, Chart.js, D3.js |
-| [Backend](https://github.com/obj809/backend-water-dashboard-nsw) | REST API service | Flask 3.1, Flask-RESTX, SQLAlchemy, PostgreSQL |
-| [Local Database](https://github.com/obj809/local-db-water-dashboard-nsw) | Local MySQL setup | Python, MySQL, Pandas, OpenPyXL |
-| [Supabase Database](https://github.com/obj809/supabase-water-dashboard-nsw) | Cloud PostgreSQL setup | Python, PostgreSQL, Supabase |
-
-## Features
-
-- Real-time dam data fetching with automatic caching via RTK Query
-- Advanced search functionality to filter dams by name
-- Interactive data visualizations using Recharts, Chart.js, and D3
-- Stacked-pages layout with smooth scroll navigation
-- Individual dam detail pages with comprehensive statistics
-- Full-screen graph views for in-depth analysis
-- Multi-period analysis (12-month, 5-year, 20-year averages)
-- Interactive Swagger UI API documentation
-
-## Quick Start
+## Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
 - Python 3.10+
-- Docker (optional)
+- MySQL 8.0+ (for local database)
+- PostgreSQL (or Supabase account for cloud database)
 
-### Using Docker
+### Quick Start
 
-```bash
-docker-compose up --build   # Build and start all services
-docker-compose down         # Stop services
-docker-compose logs -f      # Follow logs
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/water-dashboard-nsw.git
+   cd water-dashboard-nsw
+   ```
 
-### Manual Setup
+2. **Set up the database** (choose one)
 
-**Backend:**
-```bash
-cd backend-water-dashboard-nsw
-python3 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-python run.py
-# API docs available at http://localhost:5001/api/docs
-```
+   *Local MySQL:*
+   ```bash
+   cd database-local
+   python3 -m venv venv && source venv/bin/activate
+   pip install -r requirements.txt
+   # Configure .env with MySQL credentials
+   python3 scripts/local_db_create_db.py
+   python3 scripts/local_db_create_schema.py
+   python3 scripts/local_db_seed_data.py
+   ```
 
-**Frontend:**
-```bash
-cd frontend-water-dashboard-nsw
-npm install
-npm run dev
-# Dashboard available at http://localhost:5173
-```
+   *Supabase PostgreSQL:*
+   ```bash
+   cd database-supabase
+   python3 -m venv venv && source venv/bin/activate
+   pip install -r requirements.txt
+   # Configure .env with Supabase credentials
+   python scripts/db_connect.py
+   python scripts/create_schema.py
+   python scripts/seed_data.py
+   ```
 
-## API Endpoints
+3. **Start the backend API**
+   ```bash
+   cd backend
+   python3 -m venv venv && source venv/bin/activate
+   pip install -r requirements.txt
+   # Configure .env with database credentials
+   python run.py
+   ```
+   API available at `http://localhost:5001` with docs at `http://localhost:5001/api/docs`
 
-| Endpoint | Description |
-|----------|-------------|
-| `GET /api/dams` | List all dams with metadata |
-| `GET /api/dams/{id}` | Get specific dam details |
-| `GET /api/dams/{id}/storage` | Get current storage levels |
-| `GET /api/dams/{id}/history` | Get historical time-series data |
-| `GET /api/analysis` | Get system-wide rolling averages |
-
-Full API documentation available at `/api/docs` when backend is running.
-
-## Tech Stack Overview
-
-### Frontend
-- **Framework:** React 18 with TypeScript
-- **Build Tool:** Vite
-- **State Management:** Redux Toolkit (RTK Query)
-- **Routing:** React Router v6
-- **Charts:** Recharts, Chart.js, D3.js
-- **Styling:** SCSS
-- **Testing:** Vitest + Testing Library
-
-### Backend
-- **Framework:** Flask 3.1
-- **API Documentation:** Flask-RESTX with Swagger UI
-- **ORM:** Flask-SQLAlchemy
-- **Database:** PostgreSQL (production) / MySQL (local)
-- **Testing:** pytest
-- **Deployment:** Render with Gunicorn
-
-## Deployment
-
-- **Frontend:** Netlify (automatic deployments from main branch)
-- **Backend:** Render
-- **Database:** Supabase PostgreSQL
-
-![AWS Pipeline](images/aws-pipeline.png)
+4. **Start the frontend**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   Dashboard available at `http://localhost:5173`
 
 ## Project Structure
 
 ```
-water-dashboard-nsw/           # This repo - documentation & overview
-├── images/                    # Architecture diagrams & screenshots
-├── gifs/                      # Demo animations
-├── database-erd.png           # Database schema diagram
-├── commands.md                # Docker command reference
-└── README.md
-
-frontend-water-dashboard-nsw/  # Separate repo
-backend-water-dashboard-nsw/   # Separate repo
-local-db-water-dashboard-nsw/  # Separate repo
-supabase-water-dashboard-nsw/  # Separate repo
+water-dashboard-nsw/
+├── frontend/               # React TypeScript dashboard
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── features/       # Redux slices and RTK Query APIs
+│   │   ├── pages/          # Route-level components
+│   │   └── styles/         # SCSS stylesheets
+│   └── tests/              # Vitest test suites
+│
+├── backend/                # Flask REST API
+│   ├── app/
+│   │   ├── models/         # SQLAlchemy models
+│   │   ├── routes/         # API endpoints
+│   │   └── services/       # Business logic
+│   └── tests/              # pytest test suites
+│
+├── database-local/         # Local MySQL setup
+│   ├── scripts/            # Database creation and seeding
+│   └── exports/            # Excel exports
+│
+├── database-supabase/      # Cloud PostgreSQL setup
+│   └── scripts/            # Schema and seed scripts
+│
+└── docs/                   # Additional documentation
 ```
+
+## Sub-Projects
+
+| Project | Description | Documentation |
+|---------|-------------|---------------|
+| [frontend](./frontend) | React dashboard with interactive visualizations | [README](./frontend/README.md) |
+| [backend](./backend) | Flask REST API with Swagger documentation | [README](./backend/README.md) |
+| [database-local](./database-local) | Local MySQL database management | [README](./database-local/README.md) |
+| [database-supabase](./database-supabase) | Cloud PostgreSQL with Supabase | [README](./database-supabase/README.md) |
+
+## Features
+
+### Frontend
+- Real-time dam data fetching via RTK Query with automatic caching
+- Advanced search functionality to filter dams by name
+- Interactive data visualizations using multiple charting libraries
+- Stacked-pages layout with smooth scroll navigation
+- Individual dam detail pages with comprehensive statistics
+- Full-screen graph views for in-depth analysis
+- Responsive design across all device sizes
+
+### Backend API
+- Dam management with CRUD operations and geolocation data
+- Real-time storage level snapshots for all dams
+- Historical time-series data with date filtering
+- Multi-period analysis (12-month, 5-year, 20-year averages)
+- Interactive Swagger UI documentation
+- Multi-database support (MySQL and PostgreSQL)
+
+### Database
+- 36 NSW dams with metadata (capacity, coordinates, identifiers)
+- Dam grouping system (Sydney, popular, large, small, greatest released)
+- 24-month historical snapshots with rolling average analysis
+- Normalized schema with foreign key relationships
+
+## Roadmap
+
+- [ ] Historical comparison tool for dam levels across time periods
+- [ ] Export functionality for graph data (CSV, PNG)
+- [ ] Weather data integration for rainfall correlations
+- [ ] Alert system for critical storage levels
+- [ ] Dark mode theme
+- [ ] E2E testing with Playwright
+- [ ] Pagination support for large datasets
+- [ ] Rate limiting and API authentication
+- [ ] Real-time WebSocket updates
+- [ ] Docker containerization
+- [ ] Automated data refresh scheduling
+
+## Known Issues
+
+- Application requires backend API to be running; no offline mode currently implemented
+- Some touch interactions on complex charts may require refinement on mobile
+- Performance may degrade when rendering graphs with very large historical datasets
+- Render deployment has a cold start; initial page load may be slow after periods of inactivity
+- Current data is synthetic and does not reflect actual NSW dam levels
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## Contact
 
 **Oliver Jenkins**
 
-- [LinkedIn](https://www.linkedin.com/in/yourprofile)
-- [GitHub](https://github.com/obj809)
+- LinkedIn: [Visit Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [Check Projects](https://github.com/yourusername)
 - Email: obj809@gmail.com
 
 ---
 
-Oliver Jenkins © 2025
+Thanks for your interest in this project. Feel free to reach out with any thoughts or questions.
+
+© 2025 Oliver Jenkins
