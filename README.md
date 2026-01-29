@@ -33,11 +33,6 @@ React 18, TypeScript, Vite, Redux Toolkit (RTK Query), React Router v6, Recharts
 ## Design Goals
 Data-first interface with responsive design, RTK Query caching for performance, and smooth navigation.
 
-## How To Use
-1. Ensure backend API is running on `http://127.0.0.1:5001`
-2. Run `npm install` then `npm run dev`
-3. Navigate to `http://localhost:5173`
-
 ## Project Features
 - [x] Real-time data fetching with RTK Query caching
 - [x] Search functionality and stacked-pages navigation
@@ -55,11 +50,6 @@ Flask 3.1, Flask-RESTX, Flask-SQLAlchemy, Flask-Migrate, PostgreSQL/MySQL, pytes
 ## Design Goals
 RESTful architecture with auto-generated Swagger documentation and multi-database support.
 
-## How To Use
-1. Run `python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt`
-2. Configure `.env` with database credentials
-3. Run `python run.py` — docs at `http://localhost:5001/api/docs`
-
 ## Project Features
 - [x] CRUD operations with geolocation data
 - [x] Historical time-series data with date filtering
@@ -76,11 +66,6 @@ Python 3, MySQL 8.0+, PostgreSQL (Supabase), Pandas, OpenPyXL, psycopg2-binary
 
 ## Design Goals
 Normalized schema with foreign key integrity, idempotent upsert operations, and modular dependency-ordered seeding scripts.
-
-## How To Use
-1. Run `python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt`
-2. Configure `.env` with database credentials
-3. Run `python scripts/create_schema.py && python scripts/seed_data.py`
 
 ## Project Features
 - [x] NSW dams with metadata, coordinates, and grouping system
