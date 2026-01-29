@@ -22,12 +22,6 @@ A full-stack platform for monitoring dam water resources across New South Wales,
 - [Backend](#backend)
 - [Database](#database)
 
-## Goals & MVP
-Build an interactive dashboard for visualizing NSW dam data with real-time storage monitoring, historical queries with date filtering, and analytical insights including 12-month, 5-year, and 20-year rolling averages across 36 dams.
-
-## Build Strategy
-Modular architecture with separated concerns: React frontend for visualization, Flask API for data access, and interchangeable database backends (MySQL for development, PostgreSQL for production).
-
 <a id="frontend"></a>
 # Frontend - React Dashboard
 
