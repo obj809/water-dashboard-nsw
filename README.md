@@ -21,7 +21,7 @@ A full-stack platform for monitoring dam water resources across New South Wales,
 
 https://github.com/obj809/frontend-water-dashboard-nsw
 
-<img src="gifs/drone.gif" alt="App Demo" width="960"/>
+<img src="./screen-recording.gif" alt="App Demo" width="960"/>
 
 ## Tech Stack
 React 18, TypeScript, Vite, Redux Toolkit (RTK Query), React Router v6, Recharts, Chart.js, D3.js, SCSS, Vitest
